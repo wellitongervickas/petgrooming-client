@@ -22,7 +22,7 @@
     "build:serve": "webpack --mode production",
     "build:rescript": "bsb -make-world -clean-world",
     "serve": "serve dist -p 3002",
-    "clean": "rm -rf dist lib"
+    "clean": "rm -rf dist lib .bsb.lock"
   },
   "dependencies": {
     "@rescript/react": "^0.10.1",
