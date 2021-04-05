@@ -1,8 +1,4 @@
-%%raw(`
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.bs";
-
-ReactDOM.render(<App />, document.getElementById("root"));
-
-`);
+switch ReactDOM.querySelector("#root") {
+| None => ()
+| Some(root) => ReactDOM.render(<App />, root)
+}

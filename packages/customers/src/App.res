@@ -1,12 +1,6 @@
-%%raw(`
-import React from "react";
-import CustomersList from "./Components/List";
-const App = () => (
-  <div>
-    <h1>Customers</h1>
-    <CustomersList />
-  </div>
-);
-
-export default App;
-`);
+@react.component
+let make = () => (
+    <div>
+        <List />
+    </div>
+)

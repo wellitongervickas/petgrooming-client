@@ -1,19 +1,16 @@
 
 
+import * as React from "react";
+import * as List$PetgroomingClientCustomer from "./Components/List/List.bs.js";
 
-import React from "react";
-import CustomersList from "./Components/List";
-const App = () => (
-  <div>
-    <h1>Customers</h1>
-    <CustomersList />
-  </div>
-);
+function App(Props) {
+  return React.createElement("div", undefined, React.createElement(List$PetgroomingClientCustomer.make, {}));
+}
 
-export default App;
-;
+var make = App;
 
 export {
+  make ,
   
 }
-/*  Not a pure module */
+/* react Not a pure module */

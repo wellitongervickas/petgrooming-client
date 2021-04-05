@@ -1,14 +1,16 @@
 
 
+import * as React from "react";
+import * as ReactDom from "react-dom";
+import * as App$PetgroomingClientCustomer from "./App.bs.js";
 
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.bs";
+var root = document.querySelector("#root");
 
-ReactDOM.render(<App />, document.getElementById("root"));
-;
+if (!(root == null)) {
+  ReactDom.render(React.createElement(App$PetgroomingClientCustomer.make, {}), root);
+}
 
 export {
   
 }
-/*  Not a pure module */
+/* root Not a pure module */
