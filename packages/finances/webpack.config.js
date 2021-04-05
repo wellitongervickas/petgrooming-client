@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
-const deps = require("./package.json").dependencies;
 
 module.exports = {
   entry: {
@@ -10,7 +9,7 @@ module.exports = {
   mode: "development",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
-    port: 3001,
+    port: 3003,
   },
   output: {
     publicPath: "auto",
@@ -18,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.jsx|\.bs.js?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
@@ -29,19 +28,17 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "main",
-      remotes: {
-        customers: "customers@http://localhost:3002/remoteEntry.js",
-        finances: "finances@http://localhost:3003/remoteEntry.js",
+      name: "finances",
+      library: { type: "var", name: "finances" },
+      filename: "remoteEntry.js",
+      exposes: {
+        "./List": "./src/Components/List",
       },
-      shared: {
-        react: { singleton: true, requiredVersion: deps.react },
-        "react-dom": { singleton: true, requiredVersion: deps["react-dom"] },
-      },
+      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      // excludeChunks: ["main"],
+      excludeChunks: ["finances"],
     }),
   ],
 };
