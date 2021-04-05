@@ -9,6 +9,7 @@ module.exports = {
   },
   mode: "development",
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
     port: 3001,
   },
@@ -32,7 +33,6 @@ module.exports = {
       name: "main",
       remotes: {
         customers: "customers@http://localhost:3002/remoteEntry.js",
-        finances: "finances@http://localhost:3003/remoteEntry.js",
       },
       shared: {
         react: { singleton: true, requiredVersion: deps.react },

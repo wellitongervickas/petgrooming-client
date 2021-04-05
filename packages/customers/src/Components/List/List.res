@@ -1,6 +1,7 @@
+
 @react.component
 let make = () => (
     <div>
-        {React.string("List of customers component")}
+        {React.string("Customer list component")}
     </div>
 )

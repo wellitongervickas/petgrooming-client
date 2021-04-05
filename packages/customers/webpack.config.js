@@ -8,6 +8,7 @@ module.exports = {
   },
   mode: "development",
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
     port: 3002,
   },
@@ -32,7 +33,7 @@ module.exports = {
       library: { type: "var", name: "customers" },
       filename: "remoteEntry.js",
       exposes: {
-        "./List": "./src/Components/List",
+        "./Router": "./src/Components/Router",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),

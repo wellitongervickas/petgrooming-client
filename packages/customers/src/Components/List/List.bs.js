@@ -3,7 +3,7 @@
 import * as React from "react";
 
 function List(Props) {
-  return React.createElement("div", undefined, "List of customers component");
+  return React.createElement("div", undefined, "Customer list component");
 }
 
 var make = List;

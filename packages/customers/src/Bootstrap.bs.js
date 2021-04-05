@@ -2,12 +2,12 @@
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
-import * as App$PetgroomingClientCustomer from "./App.bs.js";
+import * as Router$PetgroomingClientCustomer from "./Components/Router/Router.bs.js";
 
 var root = document.querySelector("#root");
 
 if (!(root == null)) {
-  ReactDom.render(React.createElement(App$PetgroomingClientCustomer.make, {}), root);
+  ReactDom.render(React.createElement(Router$PetgroomingClientCustomer.make, {}), root);
 }
 
 export {
