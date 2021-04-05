@@ -3,7 +3,7 @@
 
 import React from "react";
 
-import CustomersList from "./List.bs";
+import CustomersList from "./Components/List";
 
 const App = () => (
   <div>

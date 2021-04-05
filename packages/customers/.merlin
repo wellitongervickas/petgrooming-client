@@ -9,4 +9,6 @@ S /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/custome
 B /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/@rescript/react/lib/ocaml
 S src
 B lib/bs/src
+S src/Components/List
+B lib/bs/src/Components/List
 ####BSB GENERATED: NO EDIT}

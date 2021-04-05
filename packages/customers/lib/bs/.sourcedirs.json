@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" , "src/Components" , "src/Components/List" ] , "pkgs" : [ [ "@rescript/react" , "/home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/@rescript/react" ] ] , "generated" : [] }

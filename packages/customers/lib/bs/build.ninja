@@ -1,0 +1,24 @@
+rescript = 1
+g_finger := /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/bs-platform/linux/bsc.exe -w -48 -bs-v 9.0.2 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
+rule deps
+  command = /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/bs-platform/linux/bsb_helper.exe -hash 2ff72de3de256278ba71b4706851dca9 -bs-ns PetgroomingClientCustomer $in
+  restat = 1
+o src/App.d : deps src/App.ast
+rule mij
+  command = /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/bs-platform/linux/bsc.exe -bs-ns PetgroomingClientCustomer -I . -I src/Components/List -I src/Components -I src -I /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/@rescript/react/lib/ocaml -bs-super-errors -bs-no-version-header -w -48 -bs-package-name petgrooming-client-customer -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/App-PetgroomingClientCustomer.cmj src/App-PetgroomingClientCustomer.cmi ../../src/App.bs.js : mij src/App.ast
+o src/Bootstrap.ast : astj ../../src/Bootstrap.res
+o src/Bootstrap.d : deps src/Bootstrap.ast
+o src/Bootstrap-PetgroomingClientCustomer.cmj src/Bootstrap-PetgroomingClientCustomer.cmi ../../src/Bootstrap.bs.js : mij src/Bootstrap.ast
+o src/Components/List/List.ast : astj ../../src/Components/List/List.res
+o src/Components/List/List.d : deps src/Components/List/List.ast
+o src/Components/List/List-PetgroomingClientCustomer.cmj src/Components/List/List-PetgroomingClientCustomer.cmi ../../src/Components/List/List.bs.js : mij src/Components/List/List.ast
+rule build_package
+  command = /home/welliton.gervickas/welliton/projects/petgrooming/client/packages/customers/node_modules/bs-platform/linux/bsc.exe -w -49 -color always -no-alias-deps  $i
+  restat = 1
+o PetgroomingClientCustomer.cmi : build_package PetgroomingClientCustomer.mlmap

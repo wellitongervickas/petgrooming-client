@@ -32,7 +32,7 @@ module.exports = {
       library: { type: "var", name: "customers" },
       filename: "remoteEntry.js",
       exposes: {
-        "./List": "./src/List.bs",
+        "./List": "./src/Components/List",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
