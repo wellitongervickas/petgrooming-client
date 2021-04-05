@@ -1,0 +1,32 @@
+{
+  "name": "@petgrooming-client/customers",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "7.13.14",
+    "@babel/preset-react": "7.13.13",
+    "babel-loader": "8.2.2",
+    "bs-platform": "^9.0.2",
+    "concurrently": "^6.0.0",
+    "html-webpack-plugin": "5.3.1",
+    "serve": "11.3.2",
+    "webpack": "5.30.0",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "scripts": {
+    "start": "concurrently \"yarn start:rescript\" \"yarn start:serve\"",
+    "start:serve": "webpack-cli serve",
+    "start:rescript": "bsb -make-world -clean-world -w",
+    "build": "webpack --mode production",
+    "build:serve": "webpack --mode production",
+    "build:rescript": "bsb -make-world -clean-world",
+    "serve": "serve dist -p 3002",
+    "clean": "rm -rf dist lib"
+  },
+  "dependencies": {
+    "@rescript/react": "^0.10.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

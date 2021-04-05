@@ -1,0 +1,25 @@
+{
+  "name": "@petgrooming-client/factory",
+  "private": true,
+  "author": {
+    "email": "wellitogervickas@gmail.com",
+    "name": "welliton gervickas"
+  },
+  "keywords": [
+    "ocaml",
+    "javascript",
+    "micro-frontends",
+    "rescript",
+    "react",
+    "create-react-app"
+  ],
+  "scripts": {
+    "start": "lerna run --scope @petgrooming-client/* --parallel start",
+    "build": "lerna run --scope @petgrooming-client/* build",
+    "serve": "lerna run --scope @petgrooming-client/* --parallel serve",
+    "clean": "lerna run --scope @petgrooming-client/* --parallel clean"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
