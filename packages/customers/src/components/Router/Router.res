@@ -1,5 +1,5 @@
 @react.component
-let make = () => {
+let make = (): React.element => {
     let route = Routes.useRoute()
     
     <>

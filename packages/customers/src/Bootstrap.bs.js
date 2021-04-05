@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
-import * as Router$PetgroomingClientCustomer from "./Components/Router/Router.bs.js";
+import * as Router$PetgroomingClientCustomer from "./components/Router/Router.bs.js";
 
 var root = document.querySelector("#root");
 

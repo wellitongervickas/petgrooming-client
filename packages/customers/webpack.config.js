@@ -33,7 +33,7 @@ module.exports = {
       library: { type: "var", name: "customers" },
       filename: "remoteEntry.js",
       exposes: {
-        "./Router": "./src/Components/Router",
+        "./Router": "./src/components/Router",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
