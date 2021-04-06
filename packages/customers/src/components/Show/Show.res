@@ -1,8 +1,7 @@
-include CustomerServices.Repository.Show
-
 @react.component
 let make = (~id) => {
-    let customer = CustomerServices.Repository.Show.read();
+    open CustomerServices.Repository
+    let customer = CustomerServices.Repository.show();
 
     <div id=id>
         {React.string("Hellow, ")}

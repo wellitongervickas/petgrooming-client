@@ -1,7 +1,7 @@
 
 
 
-function get(param) {
+function list(param) {
   return [
           {
             id: "1",
@@ -14,24 +14,26 @@ function get(param) {
         ];
 }
 
-var List = {
-  get: get
-};
-
-function read(param) {
+function show(param) {
   return {
           id: "1",
           name: "Welliton"
         };
 }
 
-var Show = {
-  read: read
-};
+function remove(param) {
+  
+}
+
+function update(param) {
+  
+}
 
 var Repository = {
-  List: List,
-  Show: Show
+  list: list,
+  show: show,
+  remove: remove,
+  update: update
 };
 
 export {

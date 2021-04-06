@@ -1,11 +1,14 @@
 module Repository = {
-    module List = {
-        type getter = { id: string, name: string }
-        let get = (): array<getter> => [{ id: "1", name: "Welliton"}, { id: "2", name: "Jhon doe"}]
+    type customer = {
+        id: string,
+        name: string,
     }
 
-    module Show = {
-        type readder = { id: string, name: string }
-        let read = (): readder => ({ id: "1", name: "Welliton"})
-    }
+    let list = (): array<customer> => [{ id: "1", name: "Welliton"}, { id: "2", name: "Jhon doe"}]
+
+    let show = (): customer => ({ id: "1", name: "Welliton"})
+
+    let remove = () => ()
+
+    let update = () => ()
 }
