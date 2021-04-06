@@ -5,12 +5,11 @@ import * as CustomerServices$PetgroomingClientCustomer from "../../services/Cust
 
 function List(Props) {
   var customers = CustomerServices$PetgroomingClientCustomer.Repository.list(undefined);
-  var customersList = customers.map(function (customer) {
-        return React.createElement("li", {
-                    key: customer.id
-                  }, React.createElement("h3", undefined, customer.name));
-      });
-  return React.createElement("div", undefined, React.createElement("h2", undefined, "Customers"), React.createElement("ul", undefined, customersList));
+  return React.createElement("div", undefined, React.createElement("h2", undefined, "Customers"), React.createElement("ul", undefined, customers.map(function (customer) {
+                      return React.createElement("li", {
+                                  key: customer.id
+                                }, React.createElement("h3", undefined, customer.name));
+                    })));
 }
 
 var make = List;

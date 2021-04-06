@@ -8,7 +8,7 @@ function Show(Props) {
   var customer = CustomerServices$PetgroomingClientCustomer.Repository.show(undefined);
   return React.createElement("div", {
               id: id
-            }, "Hellow, ", customer.name);
+            }, "Hello, ", customer.name);
 }
 
 var make = Show;

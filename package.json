@@ -8,16 +8,21 @@
   "keywords": [
     "ocaml",
     "javascript",
+    "webpack",
+    "workspaces",
+    "module federation",
+    "jest",
     "micro-frontends",
     "rescript",
     "react",
-    "create-react-app"
+    "reason"
   ],
   "scripts": {
     "start": "lerna run --scope @petgrooming-client/* --parallel start",
     "build": "lerna run --scope @petgrooming-client/* build",
     "serve": "lerna run --scope @petgrooming-client/* --parallel serve",
-    "clean": "lerna run --scope @petgrooming-client/* --parallel clean"
+    "clean": "lerna run --scope @petgrooming-client/* --parallel clean",
+    "test": "lerna run --scope @petgrooming-client/* --parallel test"
   },
   "devDependencies": {
     "lerna": "^4.0.0"

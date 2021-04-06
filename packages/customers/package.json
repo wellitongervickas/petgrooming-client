@@ -2,28 +2,21 @@
   "name": "@petgrooming-client/customers",
   "version": "0.1.0",
   "private": true,
-  "author": {
-    "email": "wellitogervickas@gmail.com",
-    "name": "welliton gervickas"
-  },
-  "keywords": [
-    "ocaml",
-    "javascript",
-    "micro-frontends",
-    "rescript",
-    "react",
-    "reason"
-  ],
   "scripts": {
     "start": "concurrently \"yarn start:rescript\" \"yarn start:serve\"",
     "start:serve": "webpack-cli serve",
     "start:rescript": "bsb -make-world -clean-world -w",
-    "build": "webpack --mode production",
+
+    "build": "concurrently \"yarn build:rescript\" \"yarn build:serve\"",
     "build:serve": "webpack --mode production",
     "build:rescript": "bsb -make-world -clean-world",
+
     "serve": "serve dist -p 3002",
-    "clean": "rm -rf dist lib .bsb.lock",
-    "test": "yarn build:rescript && jest ./src"
+    "clean": "rm -rf dist lib .bsb.lock coverage",
+
+    "test": "jest ./src",
+    "test:watch": "yarn build:rescript && yarn test --watchAll",
+    "test:coverage": "yarn build && yarn test --coverage"
   },
   "devDependencies": {
     "@babel/core": "7.13.14",
