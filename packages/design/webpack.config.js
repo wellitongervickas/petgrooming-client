@@ -16,6 +16,7 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.css$/, use: "css-loader" },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -31,9 +32,9 @@ module.exports = {
       name: "design",
       library: { type: "var", name: "design" },
       filename: "remoteEntry.js",
-      // exposes: {
-      //   "./Header": "./src/stories/Header",
-      // },
+      exposes: {
+        "./Header": "./src/stories/Header",
+      },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
