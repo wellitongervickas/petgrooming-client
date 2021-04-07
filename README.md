@@ -8,7 +8,7 @@ A micro front-end project created with:
 - React
 - Jest
 - Rescript
-
+- Storybook (implements design system)
 ## Scripts
 It will running in all workspaces
 ### Development
