@@ -14,7 +14,7 @@ function list(param) {
         ];
 }
 
-function show(param) {
+function read(param) {
   return {
           id: "1",
           name: "Welliton"
@@ -31,7 +31,7 @@ function update(param) {
 
 var Repository = {
   list: list,
-  show: show,
+  read: read,
   remove: remove,
   update: update
 };
