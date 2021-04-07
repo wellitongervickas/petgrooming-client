@@ -6,14 +6,11 @@
     "start": "concurrently \"yarn start:rescript\" \"yarn start:serve\"",
     "start:serve": "webpack-cli serve",
     "start:rescript": "bsb -make-world -clean-world -w",
-
     "build": "concurrently \"yarn build:rescript\" \"yarn build:serve\"",
     "build:serve": "webpack --mode production",
     "build:rescript": "bsb -make-world -clean-world",
-
     "serve": "serve dist -p 3002",
     "clean": "rm -rf dist lib .bsb.lock coverage",
-
     "test": "jest ./src",
     "test:watch": "yarn build:rescript && yarn test --watchAll",
     "test:coverage": "yarn build && yarn test --coverage"
