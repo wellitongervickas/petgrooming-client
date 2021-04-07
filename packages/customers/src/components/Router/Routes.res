@@ -1,5 +1,5 @@
 type routes =
-  | Show(string)
+  | Read(string)
   | List
 
 let useRoute: unit => routes = () => {
@@ -7,7 +7,7 @@ let useRoute: unit => routes = () => {
   let hash = url.hash |> Js.String.split("/")
 
   switch hash {
-  | ["", "customers", id] => Show(id)
+  | ["", "customers", id] => Read(id)
   | ["", "customers"] => List
   | _ => List
   }

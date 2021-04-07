@@ -3,15 +3,15 @@
 import * as React from "react";
 import * as CustomerServices$PetgroomingClientCustomer from "../../services/CustomerServices.bs.js";
 
-function Show(Props) {
+function Read(Props) {
   var id = Props.id;
-  var customer = CustomerServices$PetgroomingClientCustomer.Repository.show(undefined);
+  var customer = CustomerServices$PetgroomingClientCustomer.Repository.read(undefined);
   return React.createElement("div", {
               id: id
             }, "Hello, ", customer.name);
 }
 
-var make = Show;
+var make = Read;
 
 export {
   make ,

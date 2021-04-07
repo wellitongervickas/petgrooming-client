@@ -19,7 +19,7 @@ function useRoute(param) {
       return /* List */0;
     }
     var id = hash[2];
-    return /* Show */{
+    return /* Read */{
             _0: id
           };
   }
