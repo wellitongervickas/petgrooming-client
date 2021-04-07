@@ -1,11 +1,16 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import List from "./index";
+import CustomerServices from "../../services/CustomerServices.bs.js";
 
 const customerList = [
   {
     id: "1",
     name: "welliton gervickas",
+  },
+  {
+    id: "2",
+    name: "jhon doen",
   },
 ];
 
@@ -21,9 +26,16 @@ describe("Components <List>", () => {
     expect(baseElement).toBeInTheDocument(true);
   });
 
-  it("should render list of customers", () => {
+  it("should render all customers of list", () => {
     const { getByText } = render(<List />);
-    const customer = getByText(customerList[0].name);
-    expect(customer).toBeInTheDocument();
+    expect(
+      customerList.every((customer) => getByText(customer.name))
+    ).toBeTruthy();
+  });
+
+  it("should render a message when customers list is empty", () => {
+    jest.spyOn(CustomerServices.Repository, "list").mockReturnValue([]);
+    const { getByText } = render(<List />);
+    expect(getByText("Customers list is empty yet"));
   });
 });
