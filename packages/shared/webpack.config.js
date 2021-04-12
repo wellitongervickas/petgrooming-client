@@ -28,17 +28,17 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "design",
-      library: { type: "var", name: "design" },
+      name: "shared",
+      library: { type: "var", name: "shared" },
       filename: "remoteEntry.js",
       exposes: {
-        "./Header": "./src/stories/Header",
+        "./components/Header": "./src/components/Header",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      excludeChunks: ["design"],
+      excludeChunks: ["shared"],
     }),
   ],
 };

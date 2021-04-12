@@ -1,10 +1,8 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import Routes from "./routes";
+import Router from "./components/Router";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>,
+  <StrictMode children={<Router />} />,
   document.getElementById("root")
 );
