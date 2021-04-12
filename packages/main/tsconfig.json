@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "jsx": "react-jsxdev",
+    "removeComments": true,
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true
+
+  },
+  "include": ["src/**/*"]
+}

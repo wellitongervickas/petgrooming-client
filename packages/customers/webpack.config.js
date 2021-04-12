@@ -15,6 +15,15 @@ module.exports = {
   output: {
     publicPath: "auto",
   },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
   plugins: [
     new ModuleFederationPlugin({
       name: "customers",

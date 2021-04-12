@@ -1,4 +1,3 @@
-import React from "react";
 import routes from "./routes";
 
 jest.mock("customers/components/Router", () => <div>CustomersRouter</div>, {

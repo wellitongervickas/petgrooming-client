@@ -16,10 +16,20 @@ module.exports = {
   output: {
     publicPath: "auto",
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /bootstrap\.tsx$/,
+        loader: "bundle-loader",
+        options: {
+          lazy: true,
+        },
+      },
+      {
+        test: /\.tsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
       },

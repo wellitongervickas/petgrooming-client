@@ -3,9 +3,9 @@ module.exports = {
   coverageDirectory: "coverage",
   setupFilesAfterEnv: ["./jest.setup.js"],
   collectCoverageFrom: [
-    "<rootDir>/src/**/*.js",
-    "!<rootDir>/src/index.js",
-    "!<rootDir>/src/bootstrap.js",
+    "<rootDir>/src/**/*.ts",
+    "!<rootDir>/src/index.ts",
+    "!<rootDir>/src/bootstrap.ts",
   ],
   coverageThreshold: {
     global: {
