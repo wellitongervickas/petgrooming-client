@@ -1,6 +1,6 @@
 import { lazy } from "react";
 
-const CustomersRouter = lazy(() => import("customers/components/Router");
+const CustomersRouter = lazy(() => import("customers/components/Router"));
 
 export default [
   {
