@@ -1,14 +1,17 @@
 # @petgrooming-client
+## Module federation example and  a boilerplate guide for my own projects. 
+
 A micro front-end project created with:
 
 - Lerna
   - Workspaces and run scripts parallel
 - webpack
   - Module federation
-- React
+- React 17
 - Jest
 - Rescript
-- Storybook (implements design system)
+- Storybook (to implement design system)
+
 ## Scripts
 It will running in all workspaces
 ### Development
